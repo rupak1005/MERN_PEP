@@ -257,6 +257,52 @@
 // // Output the resulting string after padding
 // console.log(stone);
 
+
+
+// // Define a string variable 
+// let stone = "Soul";
+
+// // Use the padEnd() method to add padding characters
+// //" Power" to the end of the string 'stone' 
+// stone = stone.padEnd(10, " Power");
+
+// // Output the resulting string after padding
+// console.log(stone);
+// let gfg = 'GeeksforGeeks';
+// let geeks = 'GfG is the best platform to learn and\n'+
+// 'experience Computer Science.';
+
+// // Print the string as it is
+// console.log(gfg); 
+
+// console.log(geeks); 
+
+// // As string index starts from zero
+// // It will return first character of string
+// console.log(gfg.charAt(0)); 
+
+// console.log(geeks.charAt(5));
+
+
+
+// let gfg = 'GeeksforGeeks';
+// let geeks = 'GfG is the best platform\n\
+// to learn and experience\n\
+// Computer Science.';
+
+// // Return a number indicating Unicode
+// // value of character at index 0 ('G')
+// console.log(gfg.charCodeAt(0));
+// console.log(geeks.charCodeAt(5));
+
+// let gfg = 'GFG '
+// let geeks = 'stands-for-GeeksforGeeks'
+
+// // Split string on '-'. 
+// console.log(geeks.split('-'))
+
+
+
 // function trim(str) {
 //     let startInd = 0;
 //     let endInd = str.length - 1;
@@ -319,3 +365,23 @@
 //     Use slice() for most string extraction tasks, especially if you need negative indexes.
 
 //     Use substring() only if you specifi
+
+
+
+// function time(totalseconds){
+//     const days=Math.floor(totalseconds/(24*3600))
+//     totalseconds%=24*3600;
+//     const hours=Math.floor(totalseconds/3600)
+//     totalseconds%=3600
+//     const minutes=Math.floor(totalseconds/60)
+//     totalseconds%=60
+//     const seconds=Math.floor(totalseconds%60)
+//      const d = String(days).padStart(2, '0');
+//   const h = String(hours).padStart(2, '0');
+//   const m = String(minutes).padStart(2, '0');
+//   const s = String(seconds).padStart(2, '0');
+//     return `${d} days ${Math.floor(h)} hours ${m} minutes ${s} seconds`;
+
+
+// }
+// console.log(time(86400))
