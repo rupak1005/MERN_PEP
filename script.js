@@ -271,8 +271,51 @@
 //         endInd--;
 //     }
 
-//     return str.substring(startInd, endInd + 1);
+//     return str.slice(startInd, endInd + 1);
 // }
 
 // const result = trim("  hello world  ");
 // console.log(result); 
+
+
+// slice vs substring?
+
+// 1. Negative Indexes
+
+//     slice() allows negative indexes, which count from the end of the string:
+
+// js
+// 'abcdef'.slice(-3); // 'def'
+
+// substring() treats negative values as 0:
+
+//     js
+//     'abcdef'.substring(-3); // 'abcdef'
+
+// 2. Argument Order
+
+//     If the start index is greater than the end index:
+
+//         slice() returns an empty string:
+
+// js
+// 'abcdef'.slice(4, 2); // ''
+
+// substring() swaps the arguments:
+
+//         js
+//         'abcdef'.substring(4, 2); // 'cd'
+
+// 3. Use with Arrays
+
+//     slice() can also be used with arrays to extract elements.
+
+//     substring() is only for strings
+
+//     .
+
+// 4. Recommendation
+
+//     Use slice() for most string extraction tasks, especially if you need negative indexes.
+
+//     Use substring() only if you specifi
