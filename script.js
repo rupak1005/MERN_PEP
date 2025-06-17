@@ -1,6 +1,7 @@
 // "use strict"
 // // Array operations
 
+
 // // const arr=["ankit","rupak",1,2];
 
 // // Using forEach to iterate over array elements
@@ -430,13 +431,26 @@
 
 // hoisting?
 
-var x = 453
+// var x = 453
 
-function func(){
-console.log(x);
+// function func(){
+// console.log(x);
 
-var x = 12;
- console.log(x);
-}
+// var x = 12;
+//  console.log(x);
+// }
 
-func();
+// func();
+
+
+
+// callback?
+// function func2(){
+//     console.log(2);
+// }
+// function func1(callback){
+//     console.log(1);
+//     callback();
+//     console.log(3);
+// }
+// func1(func2);
