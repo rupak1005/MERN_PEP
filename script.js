@@ -445,12 +445,19 @@
 
 
 // callback?
-// function func2(){
-//     console.log(2);
-// }
-// function func1(callback){
-//     console.log(1);
-//     callback();
-//     console.log(3);
-// }
-// func1(func2);
+function func2(cb){
+    console.log(2);
+    cb();
+}
+function func1(callback){
+    console.log(1);
+    callback();
+    console.log(4);
+}
+ function func3(){
+    console.log(3);
+
+ }
+
+// Pass function references, not function calls
+func1(() => func2(func3));
