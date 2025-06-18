@@ -1,5 +1,6 @@
 const button = document.querySelector(".buttons");
 const inputsDiv = document.querySelector(".inputs");
+const inputbox=document.querySelectorAll("input");
 const fontbody = document.body;
 const stylesheet = document.getElementById("stylesheet");
 
@@ -11,10 +12,12 @@ button.addEventListener("click", function(event) {
     inputsDiv.style.padding = "20px";
     inputsDiv.style.fontSize="20px";
 
+
     // Change heading styles
     const heading = document.getElementById("heading");
     //cant add same element in before
-    heading.before("hello");
+    // heading.before("hello");
+    // document.body.after(button);
     heading.textContent = "New Payment Form";
     heading.style.fontSize = "20px";
     heading.style.color = "blue";
@@ -29,4 +32,15 @@ button.addEventListener("click", function(event) {
 
     // Toggle stylesheet
     stylesheet.disabled = !stylesheet.disabled;
+    button.style.borderRadius="20px";
+
+// var para=document.createElement("p");
+// var para2=document.createElement("h1");
+// para2.textContent="para2 appended";
+// para.textContent="para appended ";
+// document.body.append(para,para2);
+// document.body.appendChild(para2);
+// document.body.removeChild(para)
+
 });
+

@@ -11,7 +11,7 @@ body{
     border: 2px solid ;
     padding: 20px;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .expiry{
@@ -24,7 +24,7 @@ body{
     background-color: rgb(148, 148, 212);
     padding: 10px;
     font-size: 20px;
-    
+
 }
 
 .buttons:hover{
