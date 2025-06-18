@@ -13,6 +13,7 @@ button.addEventListener("click", function(event) {
 
     // Change heading styles
     const heading = document.getElementById("heading");
+    //cant add same element in before
     heading.before("hello");
     heading.textContent = "New Payment Form";
     heading.style.fontSize = "20px";
