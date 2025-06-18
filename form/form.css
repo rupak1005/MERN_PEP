@@ -1,14 +1,25 @@
-body{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    height: 100%;
+    width: 100%;
+    gap: 20px;
 }
 
 .inputs{
     display: flex;
     flex-direction: column;
-    border: 2px solid ;
+    /* align-items: center;
+    justify-content: flex-start; */
+    border: 2px solid grey;
     padding: 20px;
     gap: 10px;
     border-radius: 20px;
@@ -21,12 +32,12 @@ body{
 }
 
 .buttons{
-    background-color: rgb(148, 148, 212);
+    background-color: rgb(128, 128, 210);
     padding: 10px;
     font-size: 20px;
 
 }
 
 .buttons:hover{
-    background-color: azure;
+    background-color: rgb(145, 202, 202);
 }
