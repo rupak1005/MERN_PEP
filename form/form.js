@@ -1,9 +1,30 @@
 const button = document.querySelector(".buttons");
-const inputs = document.querySelectorAll(".inputs");
+const inputsDiv = document.querySelector(".inputs");
+const fontbody = document.body;
+const stylesheet = document.getElementById("stylesheet");
 
 button.addEventListener("click", function(event) {
     event.preventDefault(); // Prevent form submission
-    inputs.forEach(input => {
-        input.style.backgroundColor = "red";
-    });
+
+    // Change background and padding of .inputs
+    inputsDiv.style.backgroundColor = "grey";
+    inputsDiv.style.padding = "20px";
+    inputsDiv.style.fontSize="20px";
+
+    // Change heading styles
+    const heading = document.getElementById("heading");
+    heading.textContent = "New Value Applied";
+    heading.style.fontSize = "20px";
+    heading.style.color = "blue";
+    heading.style.padding = "10px";
+    heading.style.border = "1px solid black";
+    heading.style.borderRadius = "20px";
+    heading.style.backgroundColor = "cyan";
+
+    // Change body font family
+    fontbody.style.fontFamily = "Gilroy"; // Use Arial as fallback
+    fontbody.style.fontSize="20px"
+
+    // Toggle stylesheet
+    stylesheet.disabled = !stylesheet.disabled;
 });
