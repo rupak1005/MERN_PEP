@@ -27,10 +27,13 @@ body, html {
 
 #div1 {
   background: #3498db;
+  left:-30px;
 }
 
 #div2 {
   background: #e74c3c;
-  left: 90px;
-  top: 25px;
+  left: 30px;
+  mix-blend-mode:overlay
+
 }
+
