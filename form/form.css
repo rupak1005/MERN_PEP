@@ -22,6 +22,9 @@ body{
 
 .buttons{
     background-color: rgb(148, 148, 212);
+    padding: 10px;
+    font-size: 20px;
+    
 }
 
 .buttons:hover{

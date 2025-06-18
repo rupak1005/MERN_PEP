@@ -13,7 +13,8 @@ button.addEventListener("click", function(event) {
 
     // Change heading styles
     const heading = document.getElementById("heading");
-    heading.textContent = "New Value Applied";
+    heading.before("hello");
+    heading.textContent = "New Payment Form";
     heading.style.fontSize = "20px";
     heading.style.color = "blue";
     heading.style.padding = "10px";
@@ -22,7 +23,7 @@ button.addEventListener("click", function(event) {
     heading.style.backgroundColor = "cyan";
 
     // Change body font family
-    fontbody.style.fontFamily = "Gilroy"; // Use Arial as fallback
+    fontbody.style.fontFamily = "Gilroy"; 
     fontbody.style.fontSize="20px"
 
     // Toggle stylesheet
