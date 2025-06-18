@@ -444,20 +444,31 @@
 
 
 
-// callback?
-function func2(cb){
-    console.log(2);
-    cb();
-}
-function func1(callback){
-    console.log(1);
-    callback();
-    console.log(4);
-}
- function func3(){
-    console.log(3);
+// // callback?
+// function func2(cb){
+//     console.log(2);
+//     cb();
+// }
+// function func1(callback){
+//     console.log(1);
+//     callback();
+//     console.log(4);
+// }
+//  function func3(){
+//     console.log(3);
 
- }
+//  }
 
-// Pass function references, not function calls
-func1(() => func2(func3));
+// // Pass function references, not function calls
+// func1(() => func2(func3));
+
+let x=5;
+let y=x;
+y=6;
+console.log(y);
+
+let arr1=[1,2,3];
+let arr2=arr1;
+arr2.push(4);
+console.log(arr1);
+console.log(arr2);

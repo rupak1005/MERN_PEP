@@ -1,0 +1,36 @@
+/* style.css */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#div1, #div2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#div1 {
+  background: #3498db;
+}
+
+#div2 {
+  background: #e74c3c;
+  left: 90px;
+  top: 25px;
+}
