@@ -468,8 +468,15 @@ y=6;
 console.log(y);
 
 let arr1=[1,2,3];
-let arr2=[...arr1,'&'];
+let arr2=[...arr1];
 arr2.push(4);
+arr2.push(5);
 console.log(arr1);
 console.log(arr2);
-arr1.forEach(Element)
+
+var arr3 = arr2.map(function(i) {
+    console.log(i * i);
+    return i * i;
+});
+
+console.log(arr3);
