@@ -1,0 +1,41 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#main{
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+}
+#capsule {
+    height: 8px;
+    width: 410px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+   
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background-color: rgb(31, 255, 31);
+    border-radius: 100px;
+    
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+}
+h1{
+    padding: 5px;
+    border-radius: 100px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.842);
+    font-family: "Gilroy";
+    /* text-transform: uppercase; */
+    width: 400px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: ease-in-out 1s;
+    background-image: linear-gradient(rgb(57, 254, 43),rgba(0, 0, 0, 0.212) 70%);
+}

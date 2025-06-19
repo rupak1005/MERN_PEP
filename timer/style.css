@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Gilroy";
+}
+body,html{
+    /* background-color: rgba(233, 213, 213, 0.845); */
+    height: 100%;
+    width: 100%;
+    
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#timer{
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+#buttons{
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: large;
+    gap: 30px;
+
+}
+button{
+    font-size: 40px;
+    padding: 10px;
+}
