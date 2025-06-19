@@ -3,7 +3,11 @@ const inputsDiv = document.querySelector(".inputs");
 const inputbox=document.querySelectorAll("input");
 const fontbody = document.body;
 const stylesheet = document.getElementById("stylesheet");
+ const heading = document.getElementById("heading");
 
+
+button.classList.add('makeitred')
+heading.classList.add('makeitred')
 button.addEventListener("click", function(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -14,17 +18,13 @@ button.addEventListener("click", function(event) {
 
 
     // Change heading styles
-    const heading = document.getElementById("heading");
+   
+    heading.innerHTML+="<i> chuchu</i>";
     //cant add same element in before
     // heading.before("hello");
     // document.body.after(button);
-    heading.textContent = "New Payment Form";
-    heading.style.fontSize = "20px";
-    heading.style.color = "blue";
-    heading.style.padding = "10px";
-    heading.style.border = "1px solid black";
-    heading.style.borderRadius = "20px";
-    heading.style.backgroundColor = "cyan";
+    // heading.textContent = "New Payment Form";
+   
 
     // Change body font family
     fontbody.style.fontFamily = "Gilroy"; 
@@ -32,7 +32,7 @@ button.addEventListener("click", function(event) {
 
     // Toggle stylesheet
     stylesheet.disabled = !stylesheet.disabled;
-    button.style.borderRadius="20px";
+    button.style.borderRadius="20px"
 
 // var para=document.createElement("p");
 // var para2=document.createElement("h1");

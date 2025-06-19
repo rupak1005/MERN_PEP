@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+
+
+}
+#img1,#img2{
+    width: 150px;
+}
+
+h2{
+    padding: 20px;
+    font-family: "Gilroy";
+    color: rgb(161, 91, 5);
+    text-transform: uppercase;
+}
+#random{
+    font-size: 60px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    
+    
+}
