@@ -52,3 +52,9 @@ btn.addEventListener("click", function () {
         clearTimeout(headingtimeout);
     }
 });
+function click1(btn){
+    console.log("clicked button");
+    console.log(btn);
+    btn.style.color="red";
+    
+}

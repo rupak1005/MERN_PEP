@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Gilroy";
+}
+body,html{
+    background-color: rgba(233, 213, 213, 0.845);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+button{
+    color: red;;
+    font-size: 20px;
+    text-decoration: transparent;
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+
+}
+h1{
+    background-color: beige;
+    padding: 40px;
+    border-radius: 50%;
+    width: 40px;
+    text-align: center;
+    margin: 50px;
+}
