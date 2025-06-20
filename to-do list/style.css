@@ -39,25 +39,24 @@ html,body{
 
 }
 #list{
-    width: 740px;
+    /* background-color: red; */
+    height: 500px;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
 
 }
 
 #addlist{
+    height: 500px;
     width: 100%;
-    /* background-color: blueviolet; */
     padding: 40px;
     gap: 20px;
     font-size: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
-    
-
-
+    overflow: hidden;
 }
 #addlist .remove{
     padding: 10px;
@@ -65,4 +64,5 @@ html,body{
     border-radius: 10px;
     border: none;
     font-weight: 700;
+    font-size: 20px;
 }
