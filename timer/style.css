@@ -10,15 +10,23 @@ body,html{
     
 }
 #main{
-    height: 100%;
-    width: 100%;
+    border-radius: 10px;
+    margin-top: 40%;
+    height: 50%;
+    width: 80%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(231, 156, 241);
 }
 #timer{
-
+    /* background-color: rgb(152, 116, 185); */
+    background-image: radial-gradient(rgb(255, 255, 255),rgba(205, 57, 235, 0.743));
+    padding: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -37,6 +45,11 @@ body,html{
 
 }
 button{
+    background-color: transparent;
+    background-image: linear-gradient(to top,rgba(167, 56, 241, 0.815),rgba(219, 213, 213, 0.643));
+    border-radius: 10px;
+   border: 1px solid white;
+    
     font-size: 40px;
     padding: 10px;
 }

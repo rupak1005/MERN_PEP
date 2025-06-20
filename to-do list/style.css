@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+html,body{
+  height: 100%;
+  width: 100%;  
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#textarea{
+    border-radius: 20px;
+    border: none;
+    height: 200px;
+    width: 70%;
+    padding: 40px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+#add{
+    background-color: rgb(240, 231, 161);
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    width: 70%;
+    padding: 30px;
+    font-size: 20px;
+
+
+}
+#list{
+    width: 740px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#addlist{
+    width: 100%;
+    /* background-color: blueviolet; */
+    padding: 40px;
+    gap: 20px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    
+
+
+}
+#addlist .remove{
+    padding: 10px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+}
