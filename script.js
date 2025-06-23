@@ -462,21 +462,21 @@
 // // Pass function references, not function calls
 // func1(() => func2(func3));
 
-let x=5;
-let y=x;
-y=6;
-console.log(y);
+// let x=5;
+// let y=x;
+// y=6;
+// console.log(y);
 
-let arr1=[1,2,3];
-let arr2=[...arr1];
-arr2.push(4);
-arr2.push(5);
-console.log(arr1);
-console.log(arr2);
+// let arr1=[1,2,3];
+// let arr2=[...arr1];
+// arr2.push(4);
+// arr2.push(5);
+// console.log(arr1);
+// console.log(arr2);
 
-var arr3 = arr2.map(function(i) {
-    console.log(i * i);
-    return i * i;
-});
+// var arr3 = arr2.map(function(i) {
+//     console.log(i * i);
+//     return i * i;
+// });
 
-console.log(arr3);
+// console.log(arr3);

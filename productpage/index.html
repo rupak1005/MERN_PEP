@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+           
+        }
+        body {
+            background-image:-moz-repeating-radial-gradient(rgba(26, 240, 255, 0.353),rgb(36, 156, 152));
+    
+             font-family: "Gilroy";
+        }
+        #products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            align-items: center;
+            max-width: 80%;
+            /* background-color: red; */
+            margin-left: 10vw;
+            justify-content: center;
+            padding: 3vw 0;
+        }
+        .product-card {
+            text-decoration: none;
+            background: rgba(18, 112, 110, 0.606);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(53, 241, 248, 0.679);
+            border: none;
+            width: 350px;
+            height: 550px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vw;
+            transition: transform 0.2s;
+            border: 1px solid rgba(8, 235, 220, 0.784);
+        }
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(39, 247, 251, 0.407);transition: transform 0.2s;
+        }
+        #buttons{
+            /* background-color: red; */
+            width: 100%;
+            /* padding: 0.5vw; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* gap: 1vw; */
+        }
+        .btn{
+            padding: 0.5vw;
+            background: rgba(34, 233, 230, 0.102);
+            border-radius: 1vw;
+            box-shadow: 0 6px 24px rgba(39, 247, 251, 0.407);
+            font-size: 0.9vw;
+            color:  #fdfdfdf4;
+            border: 1px solid rgba(29, 249, 245, 0.196);
+            /* font-weight: bold; */
+        }
+        .btn:hover{
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(39, 247, 251, 0.407);
+            transition: transform 0.2s;
+            background: rgba(22, 223, 220, 0.534)
+
+        }
+        .product-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1em;
+        }
+        .product-card img:hover{
+             transform: translateY(-8px) scale(1.2);
+             transition: ease 0.5s;
+
+        }
+        .product-title {
+            font-family: 500;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #f7f6f6;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        .product-price {
+            color: #ffffff;
+            background-color: rgba(29, 249, 246, 0.311);
+            padding: 0.2vw 0.6vw ;
+            border-radius: 1vw;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        #dets{
+            width: 100%;
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product-rating{
+            color: #f5f503;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            background-color: #fefe7928;
+            padding: 0.1vw 0.5vw ;
+            border-radius: 1vw;
+        }
+        
+        
+        .product-desc {
+            font-size: 1.1em;
+            color: #ffffff;
+            text-align: center;
+            padding: 1vw;
+            margin-bottom: 0.5em;
+            background-color:rgba(50, 153, 156, 0.222);
+            border-radius: 0.8vw;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; margin:2vw 0; color:#f6f0f0; text-transform: uppercase; font-family: 500;">Learning JS: Product Gallery</h1>
+    <div id="products"></div>
+    <script src="script.js"></script>
+</body>
+</html>
