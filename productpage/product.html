@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Product Details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <style>
         body { font-family: "Gilroy";  background-image:-moz-repeating-radial-gradient(rgba(26, 240, 255, 0.353),rgb(36, 156, 152));; }
         #product-details {
@@ -70,9 +74,78 @@
         .back-btn:hover {
             background: #007755;
         }
+         #nav{
+            border-radius: 10vw;
+            background-color: rgb(199, 248, 250);
+            padding: 0vw 1.2vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #nav2{
+            display: flex;
+            gap: 2vw;
+            text-transform: uppercase;
+            text-align: center;
+            justify-content: center;
+        }
+        #nav2 h3{
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: rgb(37, 37, 37);
+        }
+        #nav3{
+            display: flex;
+            gap: 2vw;
+            text-transform: uppercase;
+        }
+        #nav3 h2{
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: rgb(37, 37, 37);
+
+        }
+        #nav2 h3 input{
+            border: none;
+            border-radius: 10vw;
+            font-size: 1.5vw;
+            padding: 0.5vw 1.5vw;
+            width: 12vw;
+            margin-top: -1vw;
+            background-color: rgba(240, 226, 226, 0.772);
+            
+        }
+        #logo img{
+            mix-blend-mode: darken;
+            height: 100%;
+            width: 100%;
+            
+            object-fit: cover;
+        }
+        #logo{
+            
+            height: 4vw;
+            width: 4vw;
+        }
     </style>
 </head>
 <body>
+      <div id="nav">
+        <div id="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXA1QUsZw0J-GYgqwwcxqKyHw8wHYpXERHw&s" alt=""></div>
+            <div id="nav2"><h3>men</h3>
+            <h3>women</h3>
+            <h3>home</h3>
+            <h3>beauty</h3>
+            <h3>genz</h3>
+            <h3>studio</h3>
+            <h3><input placeholder="search" type="text"></h3><i style="font-size: 2vw;
+            
+           margin-top: 1.2vw; color: rgb(58, 58, 58);
+             padding: 0.5vw 0vw;" class="ri-search-line"></i></div>
+            <div id="nav3"><h2>wishlist</h2>
+            <h2>cart<i style="padding: 0vw 1vw; font-size: 1.5vw; border-radius: 50%;margin-top: 1.2vw; color:rgba(59, 59, 59, 0.704) " class="ri-shopping-cart-2-fill"></i></h2>
+        </div>
+    </div>
     <div id="product-details">Loading...</div>
     <script src="script.js"></script>
 </body>

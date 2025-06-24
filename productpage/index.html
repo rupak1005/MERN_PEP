@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Gallery</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <style>
         * {
             padding: 0;
@@ -21,9 +25,9 @@
             flex-wrap: wrap;
             gap: 2vw;
             align-items: center;
-            max-width: 80%;
+            /* max-width: 80%; */
             /* background-color: red; */
-            margin-left: 10vw;
+            /* margin-left: 10vw; */
             justify-content: center;
             padding: 3vw 0;
         }
@@ -128,10 +132,88 @@
             background-color:rgba(50, 153, 156, 0.222);
             border-radius: 0.8vw;
         }
+        #nav{
+            border-radius: 12vw;
+            margin: 1vw;
+            padding: 2vw;
+            background-color: rgb(200, 253, 252);
+            padding: 1vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #nav2{
+            
+            display: flex;
+            gap: 2vw;
+            text-transform: uppercase;
+            text-align: center;
+            justify-content: center;
+        }
+        #nav2 h3{
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: rgb(37, 37, 37);
+        }
+        #nav3{
+            /* background-color: blue; */
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+            justify-content: space-around;
+            text-transform: uppercase;
+        }
+        #nav3 h2{
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: rgb(37, 37, 37);
+
+        }
+        #nav2 h3 input{
+            width: 12vw;
+            height: 3.3vw;
+            background-color: rgba(215, 213, 213, 0.672);
+            margin-top: -0.5vw;
+            border: none;
+            border-radius: 10vw;
+            font-size: 1.5vw;
+            padding: 0.5vw 1.5vw;
+            
+        }
+        
+        #logo img{
+            mix-blend-mode: darken;
+            height: 100%;
+            width: 100%;
+            
+            object-fit: cover;
+        }
+        #logo{
+            /* display: flex; */
+            height: 4vw;
+            width: 4vw;
+            /* background-color: red; */
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center; margin:2vw 0; color:#f6f0f0; text-transform: uppercase; font-family: 500;">Learning JS: Product Gallery</h1>
+    <div id="nav">
+        <div id="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXA1QUsZw0J-GYgqwwcxqKyHw8wHYpXERHw&s" alt=""></div>
+            <div id="nav2"><h3>men</h3>
+            <h3>women</h3>
+            <h3>home</h3>
+            <h3>beauty</h3>
+            <h3>genz</h3>
+            <h3>studio</h3>
+            <h3><input placeholder="search" type="text"><i style="
+             padding: 0vw 1vw; font-size: 2vw;
+            color: rgb(58, 58, 58);
+             padding: 0.5vw 0vw;" class="ri-search-line"></i></h3></div>
+            <div id="nav3"><h2>wishlist</h2>
+            <h2>cart <i style = "
+        margin-right: 1vw; font-size: 1.5vw; border-radius: 50%; color:rgba(59, 59, 59, 0.704) " class="ri-shopping-cart-2-fill"></i></h2>
+        </div>
+    </div>
     <div id="products"></div>
     <script src="script.js"></script>
 </body>
