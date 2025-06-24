@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: radial-gradient(circle at 50% 30%, #1af0ff5a 0%, #249c98 100%);
+            font-family: "Gilroy", Arial, sans-serif;
+            min-height: 100vh;
+        }
+        #nav {
+            border-radius: 2vw;
+            margin: 2vw 2vw 0 2vw;
+            padding: 1vw 2vw;
+            background-color: #c8fdfc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+        #logo {
+            height: 3vw;
+            width: 3vw;
+        }
+        #logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: darken;
+            border-radius: 50%;
+        }
+        #nav3 {
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+        }
+        #nav3 h2 {
+            font-size: 1.2vw;
+            font-weight: 600;
+            color: #252525;
+            margin: 0;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        #nav3 h2:hover {
+            color: #1af0ff;
+        }
+        #nav3 a {
+            text-decoration: none;
+        }
+        #nav3 .ri-shopping-cart-2-fill {
+            margin-left: 0.5vw;
+            font-size: 1.5vw;
+            border-radius: 50%;
+            color: #3b3b3bb4;
+            vertical-align: middle;
+        }
+        #cart {
+            max-width: 700px;
+            margin: 3vw auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 2vw;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1em;
+            background: rgba(18, 112, 110, 0.07);
+            border-radius: 10px;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1em;
+        }
+        .cart-title {
+            font-weight: bold;
+            color: #1b1b1b;
+            font-size: 1.1em;
+        }
+        .cart-price {
+            color: #009966;
+            margin-left: auto;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .cart-qty {
+            margin: 0 1em;
+            color: #333;
+        }
+        .remove-btn {
+            margin-left: 1em;
+            background: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .remove-btn:hover {
+            background: #d90000;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2vw;
+            background: #1af0ff;
+            color: #222;
+            border: none;
+            border-radius: 1vw;
+            padding: 0.6vw 1.5vw;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(39, 247, 251, 0.15);
+            transition: background 0.2s, color 0.2s;
+        }
+        .back-btn:hover {
+            background: #249c98;
+            color: #fff;
+        }
+        #cart-total {
+            text-align: right;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 2vw;
+            color: #009966;
+        }
+        @media (max-width: 900px) {
+            #logo { height: 6vw; width: 6vw; }
+            #nav3 h2 { font-size: 2vw; }
+            #cart { padding: 4vw; }
+        }
+        @media (max-width: 600px) {
+            #nav { flex-direction: column; gap: 1vw; }
+            #nav3 { gap: 1vw; }
+            #nav3 h2 { font-size: 3vw; }
+            #cart { padding: 6vw; }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXA1QUsZw0J-GYgqwwcxqKyHw8wHYpXERHw&s" alt="">
+        </div>
+        <div id="nav3">
+            <a href="index.html">
+                <h2>back</h2>
+            </a>
+            <a href="./cart.html" style="position: relative; display: inline-block;">
+                <h2 style="margin:0;">
+                    cart 
+                    <i class="ri-shopping-cart-2-fill"></i>
+                    <span id="cart-count" style="
+                        position: absolute;
+                        top: -10px;
+                        right: -18px;
+                        background: #ff4d4d;
+                        color: #fff;
+                        border-radius: 50%;
+                        padding: 2px 8px;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                        min-width: 22px;
+                        text-align: center;
+                        display: none;
+                    ">0</span>
+                </h2>
+            </a>
+        </div>
+    </div>
+    <div id="cart"></div>
+    <script>
+        function renderCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartDiv = document.getElementById("cart");
+            if (cart.length === 0) {
+                cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+                document.getElementById("cart-count").style.display = "none";
+                return;
+            }
+            let total = 0;
+            cartDiv.innerHTML = cart.map(item => {
+                total += item.price * item.quantity;
+                return `
+                <div class="cart-item" data-id="${item.id}">
+                    <img src="${item.thumbnail}" alt="${item.title}">
+                    <span class="cart-title">${item.title}</span>
+                    <span class="cart-qty">x${item.quantity}</span>
+                    <span class="cart-price">$${item.price * item.quantity}</span>
+                    <button class="remove-btn">Remove</button>
+                </div>
+                `;
+            }).join('') + `<div id="cart-total">Total: $${total}</div>`;
+            updateCartCount();
+        }
+
+        // Remove from cart
+        document.addEventListener("click", function(e) {
+            if (e.target.classList.contains("remove-btn")) {
+                let id = Number(e.target.closest(".cart-item").dataset.id);
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart = cart.filter(item => item.id !== id);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                renderCart();
+            }
+        });
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            const badge = document.getElementById("cart-count");
+            badge.textContent = count;
+            badge.style.display = count > 0 ? "inline-block" : "none";
+        }
+
+        renderCart();
+
+        // Listen for storage changes (if cart is updated in another tab)
+        window.addEventListener("storage", function(e) {
+            if (e.key === "cart") {
+                renderCart();
+            }
+        });
+    </script>
+</body>
+</html>
