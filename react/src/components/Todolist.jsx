@@ -1,21 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Todolist(){
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState('');
-    // const inputRef = useRef(null);
 
     function addTodo(){
-        console.log(inputValue);
         if(inputValue.trim() !== ''){
             setTodos([...todos, inputValue]);
-            
             setInputValue('');
         }
-        console.log(todos);
-        
     }
-
 
     return(
         <div className="flex flex-col items-center justify-center min-h-screen w-full bg-slate-200 p-8">
@@ -25,9 +19,8 @@ export default function Todolist(){
                     className="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                     type="text" 
                     placeholder="Enter todo" 
-                    // ref={inputRef}
                     value={inputValue}
-                    onInput={e=>{setInputValue(e.target.value)}}
+                    onChange={(e) => setInputValue(e.target.value)}
                 />
                 <button 
                     className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-4" 
@@ -37,7 +30,7 @@ export default function Todolist(){
                 </button>
                 <ol className="space-y-2">
                     {todos.map((todo, index) => (
-                        <li key={index} className="px-4 py-2 bg-gray-200  rounded-lg text-gray-800">
+                        <li key={index} className="px-4 py-2 bg-gray-200 rounded-lg text-gray-800">
                             {todo}
                         </li>
                     ))}
