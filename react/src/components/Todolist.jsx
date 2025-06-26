@@ -18,8 +18,8 @@ export default function Todolist(){
 
 
     return(
-        <div className="flex flex-col items-center justify-center min-h-screen w-full bg-slate-300 p-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <div className="flex flex-col items-center justify-center min-h-screen w-full bg-slate-200 p-8">
+            <div className="bg-zinc-100 rounded-lg shadow-lg p-6 w-full max-w-md">
                 <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">Todo List</h1>
                 <input 
                     className="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
@@ -37,7 +37,7 @@ export default function Todolist(){
                 </button>
                 <ol className="space-y-2">
                     {todos.map((todo, index) => (
-                        <li key={index} className="px-4 py-2 bg-gray-100 rounded-lg text-gray-800">
+                        <li key={index} className="px-4 py-2 bg-gray-200  rounded-lg text-gray-800">
                             {todo}
                         </li>
                     ))}
