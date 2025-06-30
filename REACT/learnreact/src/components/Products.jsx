@@ -31,7 +31,7 @@ function Products() {
                                 {product.description}
                             </p>
                             <div className="flex justify-between items-center">
-                                <span className="text-xl font-bold text-green-600 bg-green-100 py-1 px-2 rounded-full">
+                                <span className="text-xl font-bold text-green-500 bg-green-100 py-1 px-2 rounded-full">
                                     ${product.price}
                                 </span>
                                 <span className="text-sm text-yellow-600 bg-yellow-100 rounded-full px-2 py-1">
