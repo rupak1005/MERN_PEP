@@ -1,0 +1,38 @@
+/* App.css - Styles for the main App component */
+
+.app-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.nav-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.routes-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
