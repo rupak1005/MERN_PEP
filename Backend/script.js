@@ -29,6 +29,11 @@ const port=3000;
 app.listen(port,()=>{
     console.log(`Server is running on port  ${port}`);
 })
+
+app.use(function(req, res, next) {
+    console.log("middleware 1");
+    next();
+})
 app.get("/",(req,res)=>{
     res.send("Hello, World! yayy");
 })
